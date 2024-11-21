@@ -334,15 +334,15 @@ void yuv444_to_rgb_and_save(const std::string& input_bin_file, const std::string
 }
 
 int main(int argc, char* argv[]) {
-	int width = atoi(argv[2]);
-	int height = atoi(argv[3]);
-	int colorspace = atoi(argv[4]);
-	int colordepth = atoi(argv[5]);
-	int reverse = atoi(argv[6]);
-	float bytes_per_pixel;
+    int width = atoi(argv[2]);
+    int height = atoi(argv[3]);
+    int colorspace = atoi(argv[4]);
+    int colordepth = atoi(argv[5]);
+    int reverse = atoi(argv[6]);
+    float bytes_per_pixel;
 
     std::string input_file = argv[1];
-	std::string output_file = "vdin_dump_reverse.bin";
+    std::string output_file = "vdin_dump_reverse.bin";
     std::string outputImageFile = "output.bmp";
 
 	std::string temp_bin_file1 = "output.bin"; // 临时文件1
@@ -393,8 +393,8 @@ int main(int argc, char* argv[]) {
 			readRgbDataAndCreateImage("rgb.bin", outputImageFile, width, height);
 		}
 	}
-	std::remove(temp_bin_file1.c_str());
+    std::remove(temp_bin_file1.c_str());
     std::remove(temp_bin_file2.c_str());
-	std::remove(temp_bin_file3.c_str());
+    std::remove(temp_bin_file3.c_str());
     return 0;
 }
